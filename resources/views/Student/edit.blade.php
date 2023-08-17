@@ -32,28 +32,60 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $product->name }}" class="form-control" placeholder="Name">
+                    <input type="text" value="{{$student->name}}" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail"
-                        placeholder="Detail">{{ $product->detail }}</textarea>
+                    <strong>Gender:</strong>
+                    <div class="form-check">{{$student->gender}}
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Male
+                     </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                 Female
+                </label>
+                </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Image:</strong>
-                    <input type="file" name="image" class="form-control" placeholder="image">
-                    <br>
-                    <img src="/images/{{ $product->image }}" width="100px">
+                    <strong>Email:</strong>
+
+                    <input type="email" value="{{$student->email}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Mobile Phone No:</strong>
+                    <input type="number" class="form-control" value="{{$student->mobile_phone}}" id="number">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Class:</strong>
+                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Enter Your Class" >{{$student->class}}</textarea>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Address:</strong>
+                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Enter Your Address">{{$student->address}}</textarea>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Photo:</strong>
+                    <input type="file" name="image" value="{{$student->photo}}" class="form-control" placeholder="Enter Your Photo">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
-
     </form>
 @endsection
