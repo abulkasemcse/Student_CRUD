@@ -12,8 +12,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $student = Student::latest()->paginate(10);
-        return view('student.index', compact('student'))  ->with('i', (request()->input('page', 1) - 1) * 10);
+        $students = Student::latest()->paginate(10);
+        return view('students.index', compact('students'))  ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -60,7 +60,7 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        return view('student.show', compact('student'));
+        return view('students.show', compact('students'));
 
     }
 

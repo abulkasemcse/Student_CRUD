@@ -7,7 +7,7 @@
                 <h4>Add New Product</h4>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('student.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data"  style="margin-top: 20px;">
+    <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data"  style="margin-top: 20px;">
         @csrf
 
         <div class="row">

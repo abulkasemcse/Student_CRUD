@@ -7,7 +7,7 @@
                 <h4>Edit Product</h4>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('student.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('student.update', $student->id) }}" method="POST" enctype="multipart/form-data"
+    <form action="{{ route('students.update', $students->id) }}" method="POST" enctype="multipart/form-data"
         style="margin-top: 20px;">
         @csrf
         @method('PUT')
@@ -32,13 +32,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" value="{{$student->name}}" name="name" class="form-control" placeholder="Name">
+                    <input type="text" value="{{$students->name}}" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Gender:</strong>
-                    <div class="form-check">{{$student->gender}}
+                    <div class="form-check">{{$students->gender}}
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
                         Male
@@ -56,31 +56,31 @@
                 <div class="form-group">
                     <strong>Email:</strong>
 
-                    <input type="email" value="{{$student->email}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" value="{{$students->email}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Mobile Phone No:</strong>
-                    <input type="number" class="form-control" value="{{$student->mobile_phone}}" id="number">
+                    <input type="number" class="form-control" value="{{$students->mobile_phone}}" id="number">
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Class:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Enter Your Class" >{{$student->class}}</textarea>
+                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Enter Your Class" >{{$students->class}}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Address:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Enter Your Address">{{$student->address}}</textarea>
+                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Enter Your Address">{{$students->address}}</textarea>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Photo:</strong>
-                    <input type="file" name="image" value="{{$student->photo}}" class="form-control" placeholder="Enter Your Photo">
+                    <input type="file" name="image" value="{{$students->photo}}" class="form-control" placeholder="Enter Your Photo">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">

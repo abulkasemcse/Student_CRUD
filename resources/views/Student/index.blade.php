@@ -7,7 +7,7 @@
                 <h4>Student Laravel 10 CRUD Application with Bootstrap</h4>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('student.create') }}">
+                <a class="btn btn-success" href="{{ route('students.create') }}">
                     Add New Product
                 </a>
             </div>
@@ -34,10 +34,10 @@
 
             <th width="280px">Action</th>
         </tr>
-        @foreach ($student as $student)
+        @foreach ($students as $student)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td><img src="/images/{{ $product->image }}" width="100px"></td>
+                <td><img src="/images/{{ $students->image }}" width="100px"></td>
                 <td>{{ $student->name }}</td>
                 <td>{{ $student->gender }}</td>
                 <td>{{ $student->email }}</td>
@@ -47,11 +47,11 @@
                 <td>{{ $student->address }}</td>
                 <td>{{ $student->photo }}</td>
 
-                    <form action="{{ route('student.destroy', $student->id) }}" method="POST">
+                    <form action="{{ route('students.destroy', $student->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('student.show', $student->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('students.show', $student->id) }}">Show</a>
 
-                        <a class="btn btn-primary" href="{{ route('student.edit', $student->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('students.edit', $student->id) }}">Edit</a>
 
                         @csrf
                         @method('DELETE')
@@ -63,6 +63,6 @@
         @endforeach
     </table>
 
-    {!! $student->links() !!}
+    {!! $students->links() !!}
 
 @endsection
